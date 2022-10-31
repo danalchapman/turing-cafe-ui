@@ -12,6 +12,31 @@ class Form extends Component {
         }
     }
 
+    handleChange = event => {
+        this.setState({ [event.target.name]: event.target.value })
+    }
+
+    submitRes = event => {
+        event.preventDefault()
+
+        const newRes = {
+            id: Date.now(),
+            ...this.state
+        }
+
+        this.props.addRes(newRes)
+        this.clearInputs()
+    }
+
+    clearInputs = () => {
+        this.setState({ 
+            name: '',
+            date: '',
+            time: '',
+            number: ''
+         })
+    }
+
     render() {
         return (
             <form className='res-form'>
@@ -31,7 +56,7 @@ class Form extends Component {
                 />
                 <input 
                     type='text'
-                    placeholder='Time'
+                    placeholder='Time (00:00)'
                     name='time'
                     value={this.state.time}
                     onChange={event => this.handleChange(event)}
@@ -43,7 +68,9 @@ class Form extends Component {
                     value={this.state.number}
                     onChange={event => this.handleChange(event)}
                 />
-                <button>Make Reservation</button>
+                <button 
+                    className='make-res-btn'
+                    onClick={event => this.submitRes(event)}>Make Reservation</button>
             </form>
         )
     }

@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     height: 80vh;
-    justify-content: space-between;
+    justify-content: space-evenly;
     overflow: scroll;
     scrollbar-width: none;  /* Firefox */
     -ms-overflow-style: none;  /* IE and Edge */

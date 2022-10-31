@@ -1,9 +1,14 @@
 .res-form {
-    border: 2px solid red;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 5px;
     padding: 10px;
     width: 80vw;
+}
+
+.make-res-btn {
+    background-color: teal;
+    color: white;
+    cursor: pointer;
 }
