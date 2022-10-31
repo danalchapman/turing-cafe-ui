@@ -4,6 +4,7 @@
     border-radius: 10px;
     color: teal;
     height: 200px;
+    margin: 8px;
     text-align: center;
     width: 200px;
 }
@@ -12,6 +13,7 @@
     background-color: teal;
     border-width: 0px;
     border-radius: 5px;
-    width: 150px;
     color: white;
+    cursor: pointer;
+    width: 150px;
 }
