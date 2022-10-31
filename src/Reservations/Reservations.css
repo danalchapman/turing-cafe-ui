@@ -1,9 +1,13 @@
 .res-box {
-    border: 2px solid white;
     display: flex;
     flex-wrap: wrap;
-    height: 100vh;
-    justify-content: space-around;
+    height: 80vh;
+    justify-content: space-between;
     overflow: scroll;
-    width: 100vw;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
 }
+
+.res-box::-webkit-scrollbar {
+    display: none;
+  }
